@@ -247,7 +247,20 @@ npm run dev
 ```
 
 ---
+## 🔌 Default Ports and URLs
 
+| Service | Port / URL | Notes |
+|:--------|:-----------|:------|
+| FastAPI backend | `http://localhost:8000` | Main API gateway |
+| Swagger API docs | `http://localhost:8000/docs` | Disabled in production |
+| Web dashboard (Vite dev) | `http://localhost:5173` | Started with `npm run dev` |
+| Web dashboard (Docker) | `http://localhost:3000` | Started with `docker compose up` |
+| Syslog collector | UDP `5140` | Perimeter firewall logs |
+| PostgreSQL | `5432` | Docker stack only |
+| Redis | `6379` | Cache and rate limiting |
+| Health checks | `/health/live`, `/health/ready` | Kubernetes probes |
+
+---
 ## 🐳 9. Docker & Kubernetes Deployment
 
 ### Demo Docker Compose
